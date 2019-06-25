@@ -1,0 +1,25 @@
+
+$BodyFontFamily:'Hind', sans-serif;
+$HeaderFontFamily: 'Source Sans Pro', sans-serif;
+$BannerFontFamaly: 'Source Sans Pro', sans-serif;
+
+$HeaderBcgrImg: url(../img/m-h-day.jpg);
+$BodyThemeColor: #fff;
+$FontTextColor: #2c2f3c;
+$BtnBcgrnColor: #699900;
+$BanerBcgrnColor1:#679709;
+$BanerBcgrnColor2:#2c5add;
+$FooterBcgrnColor: #21232e;
+$SectionCardColor: #21232e;
+$HeadingBanerFontColor: #2c2f3c;
+$SectionTextColor:#2c2f3c;
+$UnderLineColor: #14a0c7;
+
+@mixin bradius($rad){
+    border-radius: $rad;
+}
+
+$map: ("bold": 700);
+
+
+

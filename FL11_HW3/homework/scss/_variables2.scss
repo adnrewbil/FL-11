@@ -1,0 +1,22 @@
+
+$BodyFontFamily:'Fresca', sans-serif;
+$HeaderFontFamily: 'Source Sans Pro', sans-serif;
+$BannerFontFamaly: 'Source Sans Pro', sans-serif;
+
+$HeaderBcgrImg: url(../img/m-h-night.jpg);
+$BodyThemeColor: #21232e;
+$FontTextColor: #fff;
+$BtnBcgrnColor: #e3ac00;
+$BanerBcgrnColor1:#dca107;
+$BanerBcgrnColor2:#912b53;
+$FooterBcgrnColor:#3b3f50;
+$SectionCardColor:#3b3f50;
+$HeadingBanerFontColor: #fff;
+$SectionTextColor:#fff;
+$UnderLineColor: #ff4e33;
+
+@mixin bradius($rad){
+    border-radius: $rad;
+}
+
+$map: ("bold": 700);
