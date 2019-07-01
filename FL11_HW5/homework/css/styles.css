@@ -1,0 +1,344 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/*:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+}*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 1400px;
+  text-align: center;
+  background: #0b192f;
+}
+
+.post-1 {
+  background: #B71757;
+}
+
+.post-2 {
+  background: #0D7E71;
+}
+
+.post-3 {
+  background: #b1660e;
+}
+
+.post-4 {
+  background: #d12767;
+}
+
+.post-5 {
+  background: #2d95bb;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #162b4d;
+  color: #fff;
+  margin-bottom: 2vw;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav,
+ul,
+li {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.purple {
+  color: #c52951;
+}
+
+.header-nav {
+  margin-right: 60px;
+}
+
+.header-name {
+  margin: 20px 30px;
+}
+
+.header-nav-a {
+  align-self: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 2.5vw 1.5vw;
+  font-weight: 300;
+
+}
+
+.header-nav-a:hover {
+  background: rgba(184, 184, 184, 0.3);
+}
+
+.container {
+  margin: 0px 5vw;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.travel-blog {
+  max-width: 75%;
+}
+
+.travel-post {
+  display: flex;
+}
+
+.img-post:hover,
+.travel-post-content:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.travel-post:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+
+.post-2,
+.post-4 {
+  flex-direction: row-reverse;
+}
+
+.post {
+  display: flex;
+}
+
+.post-2 .travel-post-content .header-travel-blog,
+.post-4 .travel-post-content .header-travel-blog,
+.post-2 .travel-post-content .p-travel-blog,
+.post-4 .travel-post-content .p-travel-blog {
+  text-align: right;
+}
+
+
+.travel-post-content {
+  padding: 25px 20px;
+}
+
+.header-travel-blog {
+  font-size: 40px;
+  font-weight: 200;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.p-travel-blog {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  font-weight: 300;
+}
+
+.date {
+  font-size: 40px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+}
+
+.smaller {
+  font-size: 20px;
+}
+
+.aside-news {
+  max-width: 23%;
+  color: #0b192f;
+  text-align: left;
+}
+
+.text-news {
+  padding: 2vw;
+}
+
+.header-news {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0px;
+  margin: 0;
+}
+
+.p-news {
+  font-size: 15px;
+  padding: 0;
+  color: #6d7fa1;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-post {
+  max-width: 50%;
+}
+
+.news-1,
+.news-2 {
+  margin-bottom: 2vw;
+  background: #fff;
+}
+
+
+
+
+
+
+footer {
+  background: #162b4d;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: #637693;
+  font-size: 15px;
+  margin-top: 2vw;
+  padding: 1.5vw;
+}
+
+.copyright {
+  align-self: center;
+}
+
+.copyright p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .travel-post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-post {
+    max-width: 100%;
+  }
+
+  .travel-post:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .post {
+    display: block;
+    height: 50%;
+  }
+
+  .aside-news {
+    max-width: 38%;
+    color: #0b192f;
+    text-align: left;
+  }
+
+  .travel-blog {
+    max-width: 60%;
+  }
+
+  .post-2 .travel-post-content .header-travel-blog,
+  .post-4 .travel-post-content .header-travel-blog,
+  .post-2 .travel-post-content .p-travel-blog,
+  .post-4 .travel-post-content .p-travel-blog {
+    text-align: left;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+  }
+
+  .burger-line {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .copyright p,
+  .copyright {
+    text-align: center;
+  }
+
+  .signature {
+    margin: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post {
+    display: block;
+    height: 50%;
+  }
+
+  .aside-news {
+    max-width: 100%;
+    color: #0b192f;
+    text-align: left;
+  }
+
+  .travel-blog {
+    max-width: 100%;
+  }
+
+}
