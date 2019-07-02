@@ -14,7 +14,6 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  max-width: 1400px;
   text-align: center;
   background: #0b192f;
 }
@@ -74,6 +73,8 @@ li {
 
 .header-name {
   margin: 20px 30px;
+  align-self: center;
+  justify-content: space-around;
 }
 
 .header-nav-a {
@@ -90,7 +91,9 @@ li {
 }
 
 .container {
-  margin: 0px 5vw;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 2vw;
 }
 
 main {
@@ -138,11 +141,12 @@ main {
 
 
 .travel-post-content {
-  padding: 25px 20px;
+  padding: 30px;
 }
 
 .header-travel-blog {
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 1;
   font-weight: 200;
   color: #fff;
   text-align: left;
@@ -155,17 +159,18 @@ main {
   color: rgba(255, 255, 255, 0.7);
   text-align: left;
   font-weight: 300;
+  line-height: 1.5;
 }
 
 .date {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.2);
   padding: 10px;
 }
 
 .smaller {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .aside-news {
@@ -175,11 +180,11 @@ main {
 }
 
 .text-news {
-  padding: 2vw;
+  padding: 30px;
 }
 
 .header-news {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 300;
   padding: 0px;
   margin: 0;
