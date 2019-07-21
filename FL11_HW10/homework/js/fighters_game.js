@@ -14,6 +14,7 @@ class Fighter {
         this.agility = agility;
         this.win = 0;
         this.losse = 0;
+        this.totalhp = hp;
     }
 
     getName() {
@@ -80,8 +81,12 @@ class Fighter {
     }
 
     heal(healHp) {
-        this.hp += healHp;
-        return this.hp;
+        if (this.hp + healHp >= this.totalhp) {
+            this.hp = this.totalhp;
+            return this.hp
+        } else {
+            return this.hp + healHp;
+        }
     }
 }
 
@@ -113,7 +118,17 @@ function battle(fighter1, fighter2) {
 
 }
 
-const fighter1 = new Fighter({name:'John', damage: 20, hp: 100, agility: 40});
-const fighter2 = new Fighter({name:'Joy', damage: 20, hp: 120, agility: 10});
+const fighter1 = new Fighter({
+    name: 'Ivan',
+    damage: 20,
+    hp: 100,
+    agility: 40
+});
+const fighter2 = new Fighter({
+    name: 'Vasyl',
+    damage: 20,
+    hp: 120,
+    agility: 10
+});
 
 battle(fighter1, fighter2);
