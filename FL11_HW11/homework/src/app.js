@@ -30,6 +30,14 @@ function addItem() {
     newEditBtn.appendChild(editIcon);
     itemContainer.appendChild(newEditBtn);
 
+    let newSaveBtn = document.createElement('button');
+    let saveIcon = document.createElement('i');
+    saveIcon.className = 'material-icons';
+    saveIcon.appendChild(document.createTextNode('save'));
+    newSaveBtn.appendChild(saveIcon);
+    itemContainer.appendChild(newSaveBtn);
+    newSaveBtn.style.display = 'none';
+
 
     let deleteButton = document.createElement('button');
     let icon = document.createElement('i');
@@ -50,8 +58,18 @@ function addItem() {
     }
 
     newEditBtn.onclick = function () {
-        document.getElementById('action-input').value = '';
+        newEditBtn.style.display = 'none';
+        itemContainer.contentEditable = 'true';
+        newSaveBtn.style.display = '';
     }
+    
+    newSaveBtn.onclick = function () {
+        newEditBtn.style.display = '';
+        itemContainer.contentEditable = 'false';
+        newSaveBtn.style.display = 'none';
+    }
+
+
 
     deleteButton.onclick = function () {
         itemContainer.remove();
