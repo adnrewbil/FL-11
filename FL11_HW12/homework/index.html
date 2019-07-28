@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+  <div id="root">
+    <section id="main" class="page-section">
+      <h1>Simple TODO application</h1>
+      <button id="to-add-section" class="btn" onclick='openAdd()'>Add new task</button>
+      <p id='empty-list'>TODO is empty</p>
+      <div id="task-list">
+        <ul id="todo-list">
+
+        </ul>
+      </div>
+    </section>
+
+    <section id="add" class="page-section" style="display: none">
+      <h1>Add Task</h1>
+      <form>
+        <input type="text" id="action-input">
+        <br>
+        <button type="button" id="add-button" class="btn" onclick="addNew()">Save changes</button>
+        <button type="reset" class="btn" onclick="discard()">Cancel</button>
+      </form>
+    </section>
+
+    <section id="modify" class="page-section" style="display: none">
+      <h1>Modify Item</h1>
+      <form>
+        <input type="text" id="edit-input">
+        <br>
+        <button type="button" class="btn" onclick="editDescription()">Save changes</button>
+        <button type="reset" class="btn" onclick="discard()">Cancel</button>
+      </form>
+    </section>
+
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
