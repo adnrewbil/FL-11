@@ -1,4 +1,5 @@
 const path = require('path');
+const PrettierPlugin = require("prettier-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,7 +9,7 @@ module.exports = {
   entry: ['./src/js/main.js', './src/scss/main.scss'],
   output: {
     filename: 'js/app.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './dist')
     //publicPath: '/dist'
   },
   devServer: {
@@ -53,6 +54,7 @@ module.exports = {
 
   },
   plugins: [
+    new PrettierPlugin(),
     new HtmlWebpackPlugin({
       hash: true,
       template: './src/index.html',
