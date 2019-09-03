@@ -1,0 +1,76 @@
+.goods {
+    background: rgb(214, 252, 252);
+    background: linear-gradient(0deg, rgba(214, 252, 252, 1) 0%, rgba(244, 255, 255, 1) 100%);
+    border-radius: 5px;
+}
+
+.pack {
+    font-size: 15px;
+    text-align: center;
+    width: 200px;
+    height: 250px;
+}
+
+.pack-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.material-icons {
+    color: gold;
+}
+
+.basket {
+    flex-wrap: wrap;
+}
+
+span {
+    text-align: center;
+    margin: auto -30px;
+}
+
+span:nth-child(1) {
+    position: absolute;
+    font-size: 40px;
+    z-index: 1;
+}
+
+span:nth-child(2) {
+    position: absolute;
+    font-size: 25px;
+    z-index: 2;
+    margin-top: 20px;
+    margin-left: -2px;
+}
+
+span:nth-child(3) {
+    position: absolute;
+    font-size: 15px;
+    z-index: 3;
+    margin-top: 35px;
+    margin-left: -8px;
+}
+
+.MuiRating-root {
+    margin-top: 10px;
+}
+
+.emoji-preview {
+    align-self: center;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+.rating-stars {
+    align-items: center;
+    align-content: center;
+}
+
+.MuiRating-root {
+    margin: 5px 20px;
+}
