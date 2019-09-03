@@ -7,7 +7,7 @@ export class Emoji extends React.Component{
         super(props);
 
         this.state = {
-            emoji: []
+            emoji: [],
         }
     }
 
@@ -25,7 +25,8 @@ export class Emoji extends React.Component{
     }
         return this.state.emoji.map(emoji => {
             return (
-              <EmojiPreview 
+              <EmojiPreview
+                addEmojiToBascket={this.props.addEmojiToBascket}
                 id = {emoji.id}
                 emoji1 = {emoji.emoji[0].char}
                 emoji2 = {emoji.emoji[1].char}

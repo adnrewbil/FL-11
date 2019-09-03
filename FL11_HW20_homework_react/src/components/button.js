@@ -6,7 +6,7 @@ const GetButton = (props) => {
       console.log('Click');
     }
          return (
-           <button className="btn btn-primery" onClick={handleClick}>Get($)</button>
+           <button className="btn btn-primery" onClick={handleClick()}>Get({props}$)</button>
          )
   }
 export default GetButton;
