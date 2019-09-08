@@ -5,10 +5,8 @@
   <div class="navigation-btn">
     <mat-form-field class="select">
       <mat-label>Source Name</mat-label>
-      <select matNativeControl required>
-        <option value="1">Source 1</option>
-        <option value="2">Source 2</option>
-        <option value="3">Source 3</option>
+      <select matNativeControl required >
+        <option *ngFor="let s of sourceList" value="{{s.id}}">{{s.sourceName}}</option>
       </select>
     </mat-form-field>
     <div class="filter-section">

@@ -13,12 +13,12 @@ export class NewsService {
 
   filterValue: string = '';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getNews():Observable<News[]> {
+  getNews(): Observable<News[]> {
     return this.http.get<News[]>(this.newsUrl);
   }
-  getSource():Observable<Source[]> {
+  getSource(): Observable<Source[]> {
     return this.http.get<Source[]>(this.sourceUrl);
   }
 

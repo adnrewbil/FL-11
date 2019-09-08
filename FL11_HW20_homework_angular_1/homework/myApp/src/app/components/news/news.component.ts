@@ -28,10 +28,6 @@ export class NewsComponent implements OnInit {
       this.newsList = news;
     });
 
-    this.newsService.getSource().subscribe(src => {
-      this.sourceList = src;
-    });
-
   }
 
   public setLocalSource(sourceId) {

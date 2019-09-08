@@ -10,7 +10,9 @@ export class NewItemComponent implements OnInit {
 
   @Input() newsItem: News;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
