@@ -1,0 +1,5 @@
+<div class="news-line">
+  <div class="news-item" *ngFor="let news of newsList | filter: this.newsService.filterValue">
+    <app-new-item [newsItem]="news"></app-new-item>
+  </div>
+</div>

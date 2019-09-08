@@ -1,0 +1,30 @@
+.header {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;    
+  }
+
+.source-name {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    background: rgb(223, 223, 223);
+    border: 1px solid #000;
+    font-weight: 600;
+    height: 40px;
+}
+
+.navigation-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.select	{
+  font-size: 20px;
+}

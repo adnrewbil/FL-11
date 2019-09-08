@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="source-name">
+    <div>Source name</div>
+  </div>
+  <div class="navigation-btn">
+    <mat-form-field class="select">
+      <mat-label>Source Name</mat-label>
+      <select matNativeControl required>
+        <option value="1">Source 1</option>
+        <option value="2">Source 2</option>
+        <option value="3">Source 3</option>
+      </select>
+    </mat-form-field>
+    <div class="filter-section">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Type your text ..." #inputVal>
+          </mat-form-field>
+      <!-- <input matInput class="input-filter" placeholder="" > -->
+      <button mat-button (click)="onClick(inputVal.value)">Filter</button>
+    </div>
+    <a mat-button routerLink="/create">Add Article</a>
+  </div>
+</header>
