@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="source-name">
+    <div>{{heading}}</div>
+  </div>
+  <div class="navigation-btn">
+    <mat-form-field class="select">
+      <mat-label>Source Name</mat-label>
+      <select matNativeControl required  [(ngModel)]="selectedOption" (click) ="select()" >
+        <option *ngFor="let source of sourceList" value="{{source.sourceId}}">{{source.sourceName}}</option>
+        <option  value="All Source">All Sources</option>
+      </select>
+    </mat-form-field>
+    <div class="filter-section">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Type your text ..." #inputVal>
+          </mat-form-field>
+      <button mat-button (click)="onClick(inputVal.value)">Filter</button>
+    </div>
+    <a mat-button routerLink="/create">Add Article</a>
+  </div>
+</header>
