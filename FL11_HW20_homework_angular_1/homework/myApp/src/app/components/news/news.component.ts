@@ -15,25 +15,17 @@ export class NewsComponent implements OnInit {
   public newsList: News[];
   public sourceList: Source[];
   public source: Source[];
-  public setSource: Function;
-
+  public sourceFilter: number;
 
   constructor(public newsService: NewsService) { }
 
-
   ngOnInit() {
-    this.setSource = this.setLocalSource.bind(this);
+    this.sourceFilter = this.newsService.sourceFilter;
 
     this.newsService.getNews().subscribe(news => {
       this.newsList = news;
     });
 
-  }
-
-  public setLocalSource(sourceId) {
-    this.sourceList = this.source.filter(src => {
-      return src.sourceId === sourceId;
-    });
   }
 
 

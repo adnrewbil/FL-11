@@ -11,9 +11,13 @@ export class NewsService {
   newsUrl: string = '../../assets/news.json';
   sourceUrl: string = '../../assets/source.json';
 
-  filterValue: string = '';
+  public filterValue: string = '';
+  public sourceFilter: number;
+  public setSelected;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.setSelected = this.localSetSelected.bind(this);
+   }
 
   getNews(): Observable<News[]> {
     return this.http.get<News[]>(this.newsUrl);
@@ -22,4 +26,7 @@ export class NewsService {
     return this.http.get<Source[]>(this.sourceUrl);
   }
 
+  localSetSelected(val: number) {
+    this.sourceFilter = val;
+  }
 }

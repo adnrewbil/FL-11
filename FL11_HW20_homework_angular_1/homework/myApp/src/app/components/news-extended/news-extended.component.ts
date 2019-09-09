@@ -11,13 +11,12 @@ export class NewsExtendedComponent implements OnInit {
   public id: number;
   routeObserverable: Subscription;
   constructor(private route: ActivatedRoute) {
-    console.log('Called Constructor');
   }
   ngOnInit() {
-    console.log(this.route.snapshot.queryParams);
+    // console.log(this.route.snapshot.queryParams);
     this.routeObserverable = this.route.queryParams.subscribe(params => {
         this.id = params.id;
-        console.log(params);
+        // console.log(params);
     });
   }
 

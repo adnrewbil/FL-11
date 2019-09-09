@@ -17,6 +17,7 @@ import { NewItemComponent } from './components/new-item/new-item.component';
 import { NewsExtendedComponent } from './components/news-extended/news-extended.component';
 import { FilterPipe } from './pipes/filter-pipe.pipe';
 import { FormsModule } from '@angular/forms';
+import { SelectedPipePipe } from './pipes/selected-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,11 @@ import { FormsModule } from '@angular/forms';
     NewsSourceComponent,
     NewsComponent,
     CreateComponent,
-    ReadMoreComponent,
     HomeComponent,
     NewItemComponent,
     NewsExtendedComponent,
-    FilterPipe
+    FilterPipe,
+    SelectedPipePipe
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { News } from '../models/News';
 export class FilterPipe implements PipeTransform {
 
   transform(value: News[], filterValue: string): any {
+    if ( value === undefined) {return value; }
     return value.filter(v => v.title.includes(filterValue));
   }
 

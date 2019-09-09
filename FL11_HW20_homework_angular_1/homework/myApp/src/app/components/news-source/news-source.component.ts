@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NewsService } from 'src/app/services/news.service';
 import { Source } from '../../models/Source';
+import { News } from 'src/app/models/News';
 
 @Component({
   selector: 'app-news-source',
@@ -10,7 +11,10 @@ import { Source } from '../../models/Source';
 
 export class NewsSourceComponent implements OnInit {
 
+  public selectedOption: number;
   public sourceList: Source[];
+  public newsList: News[];
+  public heading: string = 'Source name';
 
   constructor(public service: NewsService ) {
 
@@ -20,10 +24,19 @@ export class NewsSourceComponent implements OnInit {
     this.service.getSource().subscribe(src => {
       this.sourceList = src;
     });
-    console.log(this.sourceList);
   }
 
   onClick(val: string) {
     this.service.filterValue = val;
   }
+
+  select() {
+    this.sourceList.map(s => {
+      if (+this.selectedOption === s.sourceId) {
+        this.heading = s.sourceName;
+      }
+    });
+    this.service.setSelected(this.selectedOption);
+  }
+
 }
