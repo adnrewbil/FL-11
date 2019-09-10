@@ -1,5 +1,13 @@
 <div class="news-line">
-  <div class="news-item" *ngFor="let news of newsList | filter: this.newsService.filterValue | selectedPipe: this.newsService.sourceFilter">
-    <app-new-item [newsItem]="news"></app-new-item>
+  <div *ngIf="newsList?.length > 0; else noNews">
+    <div class="news-item" *ngFor="let news of newsList | filter: this.newsService.filterValue ">
+      <app-new-item [newsItem]="news"></app-new-item>
+    </div>
   </div>
 </div>
+<!-- | selectedPipe: this.newsService.sourceFilter -->
+
+<ng-template #noNews>
+  <hr>
+  <h5>There are no news to list</h5>
+</ng-template>

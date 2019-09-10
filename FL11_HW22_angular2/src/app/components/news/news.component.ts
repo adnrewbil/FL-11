@@ -22,7 +22,10 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.sourceFilter = this.newsService.sourceFilter;
 
-    this.newsService.getNews().subscribe(news => {
+    // this.newsService.getNews().subscribe(news => {
+    //   this.newsList = news;
+    // });
+    this.newsService.getFireNews().subscribe(news => {
       this.newsList = news;
     });
 
