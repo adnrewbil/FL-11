@@ -1,34 +1,35 @@
-
 <div class="header">
   <div>Create News</div>
 </div>
 <div class="create-news">
   <div class="create-news-form">
-    <div class="column">
-      <mat-form-field class="mat">
-        <input matInput placeholder="Heading" [(ngModel)]="title">
-      </mat-form-field>
-      <mat-form-field class="mat">
-        <input matInput placeholder="Short description" [(ngModel)]="description">
-      </mat-form-field>
-      <mat-form-field class="mat">
-        <textarea class="textarea" matInput placeholder="Textarea" [(ngModel)]="text"></textarea>
-      </mat-form-field>
-    </div>
-    <div class="column">
-      <mat-form-field class="mat">
-        <input matInput placeholder="Date" [(ngModel)]="date">
-      </mat-form-field>
-      <mat-form-field class="mat">
-        <input matInput placeholder="Author" [(ngModel)]="author">
-      </mat-form-field>
-      <mat-form-field class="mat">
-        <input matInput placeholder="Source URL" [(ngModel)]="url">
-      </mat-form-field>
-      <div class="buttons">
-        <button class="btn" mat-button (click)="addNews()">Save</button>
-        <button class="btn" mat-button routerLink="/" >Cancel</button>
+    <form class="create-news-form" (ngSubmit)="onSubmit()">
+      <div class="column">
+        <mat-form-field class="mat">
+          <input name="first" matInput placeholder="Heading" [(ngModel)]="newItem.title">
+        </mat-form-field>
+        <mat-form-field class="mat">
+          <input name="first" matInput placeholder="Short description" [(ngModel)]="newItem.shortDescription">
+        </mat-form-field>
+        <mat-form-field class="mat">
+          <textarea  name="first" class="textarea" matInput placeholder="Textarea" [(ngModel)]="newItem.content"></textarea>
+        </mat-form-field>
       </div>
-    </div>
+      <div class="column">
+        <mat-form-field class="mat">
+          <input name="first" matInput placeholder="Date" [(ngModel)]="newItem.date">
+        </mat-form-field>
+        <mat-form-field class="mat">
+          <input name="first" matInput placeholder="Author" [(ngModel)]="newItem.author">
+        </mat-form-field>
+        <mat-form-field class="mat">
+          <input name="first" matInput placeholder="Source URL" [(ngModel)]="newItem.url">
+        </mat-form-field>
+        <div class="buttons">
+          <button class="btn" mat-button name="first" type="submit" value="Submit">Save</button>
+          <button class="btn" type="button" mat-button routerLink="/home">Cancel</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

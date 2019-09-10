@@ -1,10 +1,10 @@
 <div class="news-line">
-  <div *ngIf="newsList?.length > 0; else noNews">
+  <!-- <div *ngIf="newsList?.length > 0; else noNews"> -->
     <div class="news-item" *ngFor="let news of newsList | filter: this.newsService.filterValue ">
       <app-new-item [newsItem]="news"></app-new-item>
     </div>
   </div>
-</div>
+<!-- </div> -->
 <!-- | selectedPipe: this.newsService.sourceFilter -->
 
 <ng-template #noNews>

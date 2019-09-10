@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { News } from 'src/app/models/News';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-create',
@@ -7,27 +9,41 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  title: string;
-  description: string;
-  text: string;
-  date: string;
-  author: string;
-  url: string;
+  public newItem: News = {
+    img: 'https://picsum.photos/200',
+    title: '',
+    shortDescription: '',
+    content: '',
+    date: '',
+    author: '',
+    url: ''
+  };
 
-  constructor() { }
+  constructor(public newService: NewsService) { }
 
   ngOnInit() {
   }
 
-  addNews() {
-    console.log(`
-      News was saved
-      Tile: ${this.title}
-      Description: ${this.description}
-      Text: ${this.text}
-      Date: ${this.date}
-      Author: ${this.author}
-      Url: ${this.url}`
-    );
+  onSubmit() {
+    if (this.newItem.title !== '' && this.newItem.url !== '') {
+      this.newService.addItem(this.newItem);
+
+      this.newItem.title = '';
+      this.newItem.shortDescription = '';
+      this.newItem.content = '';
+      this.newItem.date = '';
+      this.newItem.author = '';
+      this.newItem.url = '';
+    }
+
   }
 }
+// console.log(`
+//       News was saved
+//       Tile: ${this.newItem.title}
+//       Description: ${this.newItem.shortDescription}
+//       Text: ${this.newItem.content}
+//       Date: ${this.newItem.date}
+//       Author: ${this.newItem.author}
+//       Url: ${this.newItem.url}`
+//     );
