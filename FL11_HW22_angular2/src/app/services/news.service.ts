@@ -15,15 +15,15 @@ export class NewsService {
   public filterValue: string = '';
   public sourceFilter: number;
   public setSelected;
-
+  public news: News[];
   public newsCollection: AngularFirestoreCollection<News>;
-  public news: Observable<News[]>;
+  public newsObserverable: Observable<News[]>;
 
   constructor(private http: HttpClient, public afs: AngularFirestore) {
     this.setSelected = this.localSetSelected.bind(this);
 
     this.newsCollection = this.afs.collection('news-blog');
-    this.news = this.newsCollection.valueChanges();
+    this.newsObserverable = this.newsCollection.valueChanges();
    }
 
   getNews(): Observable<News[]> {
@@ -37,7 +37,7 @@ export class NewsService {
     this.sourceFilter = val;
   }
   getFireNews(){
-    return this.news;
+    return this.newsObserverable;
   }
 
   addItem(item: News) {

@@ -11,11 +11,9 @@ import { News } from 'src/app/models/News';
 
 export class NewsSourceComponent implements OnInit {
 
-  public newsList: News[];
-
-
   public selectedOption: number;
   public sourceList: Source[];
+  public newsList: News[];
   public heading: string = 'Source name';
   public news: News[];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { News } from 'src/app/models/News';
 import { NewsService } from 'src/app/services/news.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -19,10 +20,15 @@ export class CreateComponent implements OnInit {
     url: ''
   };
 
-  constructor(public newService: NewsService) { }
+  constructor(public newService: NewsService, public router: Router) {
+
+  }
+
 
   ngOnInit() {
+
   }
+
 
   onSubmit() {
     if (this.newItem.title !== '' && this.newItem.url !== '') {
@@ -35,6 +41,7 @@ export class CreateComponent implements OnInit {
       this.newItem.author = '';
       this.newItem.url = '';
     }
+
 
   }
 }
