@@ -1,0 +1,102 @@
+@import "variables";
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-bgr-body;
+
+  .container {
+    background-color: $color-white;
+    border-radius: 3px;
+    margin: 10px auto;
+    width: 600px;
+    height: 570px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+}
+.lets-play {
+  text-align: center;
+  margin: 15px 0;
+}
+
+p,
+h2 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 250px;
+  margin-top: 30px;
+  height: 50px;
+  text-align: center;
+}
+
+.buttons {
+  margin: 10px auto;
+}
+
+#rock {
+  background-size: 95px 135px;
+  background-color: $color-white;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+#paper {
+  background-size: 95px 135px;
+  background-color: $color-white;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+#scissors {
+  background-size: 95px 135px;
+  background-color: $color-white;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+.s {
+  color: $color-yellow;
+}
+
+.p {
+  color: $color-green;
+}
+
+.r {
+  color: $color-red;
+}
+
+.win {
+  background-color: $color-green;
+  color: $color-white;
+  border-radius: 15px;
+}
+
+.lose {
+  background-color: $color-red;
+  color: $color-white;
+  border-radius: 15px;
+}
+
+#result-message {
+  padding-top: 40px;
+  margin: 20px 200px;
+  height: 70px;
+  text-align: center;
+}

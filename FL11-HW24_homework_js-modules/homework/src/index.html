@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Game RPS</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="lets-play">Let’s play!</h1>
+        <p><span class="s">Scissors</span> cut <span class="p">paper</span></p>
+        <p><span class="p">Paper</span> cover <span class="r">rock</span></p>
+        <p>
+          <span class="r">Rock</span> crushes <span class="s">scissors</span>
+        </p>
+      </div>
+      <div class="score">
+        <div class="user">
+          <h2>You</h2>
+          <div id="user-score">0</div>
+        </div>
+        <div>Round<br /><span id="round">0</span></div>
+        <div class="user">
+          <h2>Comp</h2>
+          <div id="comp-score">0</div>
+        </div>
+      </div>
+      <div class="result-message-placement">
+        <div id="result-message"></div>
+      </div>
+      <div class="buttons">
+        <button
+          style="background-image: url('img/rock.png')"
+          id="rock"
+        ></button>
+        <button
+          style="background-image: url('img/paper.png')"
+          id="paper"
+        ></button>
+        <button
+          style="background-image: url('img/scissors.png')"
+          id="scissors"
+        ></button>
+      </div>
+      <div>
+        <h2><a href="#" id="reset">Reset</a></h2>
+      </div>
+    </div>
+  </body>
+</html>
